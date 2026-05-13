@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policies</title>
+    <meta
+      name="description"
+      content="A directory of privacy policies for our apps."
+    />
+    <style>
+      :root {
+        --bg: #fafaf7;
+        --surface: #ffffff;
+        --border: #e7e5db;
+        --text: #1a1a17;
+        --text-soft: #57564f;
+        --text-muted: #87867d;
+        --accent: #2f6f5a;
+        --accent-soft: #e6f0eb;
+        --accent-ink: #1d4839;
+        --font-sans:
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        --font-serif:
+          "Newsreader", "Source Serif Pro", Georgia, "Times New Roman", serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f0f0e;
+          --surface: #1b1b19;
+          --border: #2a2a26;
+          --text: #f3f2ec;
+          --text-soft: #c8c6bb;
+          --text-muted: #8a8980;
+          --accent: #8bd5b9;
+          --accent-soft: #1d2e28;
+          --accent-ink: #c8eed9;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: var(--font-sans);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 80px 24px;
+      }
+      .eyebrow {
+        display: inline-block;
+        margin: 0 0 16px;
+        padding: 5px 12px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent-ink);
+        background: var(--accent-soft);
+        border-radius: 999px;
+      }
+      h1 {
+        font-family: var(--font-serif);
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        margin: 0 0 16px;
+      }
+      .lede {
+        color: var(--text-soft);
+        font-size: 1.05rem;
+        max-width: 56ch;
+        margin: 0 0 40px;
+      }
+      .apps {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 12px;
+      }
+      .app-link {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 20px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        text-decoration: none;
+        color: var(--text);
+        transition: transform 0.15s ease, border-color 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+      .app-link:hover {
+        border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+        transform: translateY(-1px);
+        box-shadow: 0 6px 24px -12px rgba(20, 20, 20, 0.18);
+      }
+      .app-mark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 11px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        flex-shrink: 0;
+      }
+      .app-body { flex: 1; min-width: 0; }
+      .app-name {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 0 0 2px;
+        letter-spacing: -0.005em;
+      }
+      .app-desc {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin: 0;
+      }
+      .app-arrow {
+        color: var(--text-muted);
+        font-size: 18px;
+        flex-shrink: 0;
+        transition: transform 0.15s ease, color 0.15s ease;
+      }
+      .app-link:hover .app-arrow {
+        color: var(--accent);
+        transform: translateX(2px);
+      }
+      footer {
+        margin-top: 56px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy Policies</h1>
+      <p class="lede">
+        Each of our apps has its own privacy policy. Pick the one you&rsquo;re
+        looking for below.
+      </p>
+
+      <ul class="apps">
+        <li>
+          <a class="app-link" href="./clipnest/">
+            <span class="app-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
+                <rect x="8" y="6" width="16" height="22" rx="3" stroke="currentColor" stroke-width="2" />
+                <rect x="12" y="3" width="8" height="5" rx="1.5" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity=".1" />
+                <path d="M12 15h8M12 19h8M12 23h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="app-body">
+              <p class="app-name">ClipNest</p>
+              <p class="app-desc">Clipboard manager — privacy policy</p>
+            </span>
+            <span class="app-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+
+      <footer>
+        <p>&copy; <span id="year">2026</span> &mdash; All rights reserved.</p>
+      </footer>
+    </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
