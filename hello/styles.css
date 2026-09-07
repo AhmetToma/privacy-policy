@@ -1,27 +1,16 @@
 :root {
   --bg: #fafaf7;
   --text: #1a1a17;
-  --border: #e7e5db;
-  --surface: #ffffff;
   --font-serif:
     "Amiri", "Scheherazade New", "Noto Naskh Arabic", "Geeza Pro",
     "Newsreader", "Source Serif Pro", Georgia, "Times New Roman", serif;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root {
     --bg: #0f0f0e;
     --text: #f3f2ec;
-    --border: #2a2a26;
-    --surface: #1b1b19;
   }
-}
-
-:root[data-theme="dark"] {
-  --bg: #0f0f0e;
-  --text: #f3f2ec;
-  --border: #2a2a26;
-  --surface: #1b1b19;
 }
 
 *,
@@ -41,56 +30,6 @@ body {
   color: var(--text);
   font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
-}
-
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  inset-inline-end: 20px;
-  z-index: 10;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--text);
-  cursor: pointer;
-  transition: transform 0.15s ease, border-color 0.15s ease;
-}
-
-.theme-toggle:hover {
-  transform: translateY(-1px);
-}
-
-.theme-toggle:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 3px;
-}
-
-/* Show the icon for the theme you'd switch *to*. */
-.icon-sun {
-  display: none;
-}
-
-:root[data-theme="dark"] .icon-sun {
-  display: block;
-}
-
-:root[data-theme="dark"] .icon-moon {
-  display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .icon-sun {
-    display: block;
-  }
-  :root:not([data-theme="light"]) .icon-moon {
-    display: none;
-  }
 }
 
 .stage {
